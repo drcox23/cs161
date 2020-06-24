@@ -1,0 +1,2 @@
+C:\Users\drcox\OneDrive\computer-science\cs161\Assignment1\Debug\Assignment1.exe
+C:\Users\drcox\OneDrive\computer-science\cs161\Assignment1\Debug\Assignment1.pdb
