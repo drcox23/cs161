@@ -4,7 +4,6 @@
 // 06/23/2020
 // I started this program from Visual Studio, selecting a new terminal project. I have also tied the source control of the project to my Git repository
 // by selecting this project type in Visual Studio, it auto-populates the code to output "Hello World". I manually updated to output "Hello Doug"
-// test github
 
 #include <iostream>
 using namespace std;
