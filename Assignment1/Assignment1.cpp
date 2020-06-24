@@ -1,8 +1,9 @@
 // Assignment1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//This program shall print my name in the terminal
-// Doug Cox - 06/23/2020
+//This is my first program for CS161 and in C++! Program shall print my name in the terminal
+// Doug Cox
+// 06/23/2020
 // I started this program from Visual Studio, selecting a new terminal project. I have also tied the source control of the project to my Git repository
-// by selecting this project type in Visual Studio, it auto-populates the code to output "Hello World". Updating to output "Hello Doug"
+// by selecting this project type in Visual Studio, it auto-populates the code to output "Hello World". I manually updated to output "Hello Doug"
 
 #include <iostream>
 using namespace std;
