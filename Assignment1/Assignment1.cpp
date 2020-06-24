@@ -1,5 +1,5 @@
 // Assignment1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//This is my first program for CS161 and in C++! Program shall print my name in the terminal
+// This is my first program for CS161 and in C++! Program shall print my name in the terminal
 // Doug Cox
 // 06/23/2020
 // I started this program from Visual Studio, selecting a new terminal project. I have also tied the source control of the project to my Git repository
