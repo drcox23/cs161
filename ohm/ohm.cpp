@@ -1,10 +1,24 @@
-
+// Assignement #2 - Ohm - output 
+// Ohm's law is Voltage = Current x Resistance (also referred to as volts = amps * ohms) - depicted as E = I*R
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double amps, ohms, volts;
+    
+    cout << "Lets determine how many volts are needed to supply the circuit! \n"
+         << "Enter how many amps you will be supplying" << endl; 
+    cin >> amps; //user enters amps
+    cout << "Now enter how many ohms or resistance will be in place." << endl;
+    cin >> ohms; //user enter ohms
+
+    volts = amps * ohms; //calculate volts
+
+    cout << "The amount of volts needed to run the circuit is " << volts << " ." << endl; //display volts
+        
+    return (0);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
