@@ -1,5 +1,7 @@
+// Douglas Cox
 // Assignement #2 - Ohm - output 
 // Ohm's law is Voltage = Current x Resistance (also referred to as volts = amps * ohms) - depicted as E = I*R
+// source of Ohms's law formula - https://www.fluke.com/en-us/learn/best-practices/measurement-basics/electricity/what-is-ohms-law
 
 #include <iostream>
 using namespace std;
