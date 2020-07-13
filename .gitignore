@@ -32,5 +32,6 @@
 *.app
 
 # VS files
+*.vs*
 *.vcxproj*
-
+*/Debug*
