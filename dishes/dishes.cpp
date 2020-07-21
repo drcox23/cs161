@@ -1,6 +1,6 @@
 // Douglas Cox
 // Assignment 5 - dishes
-// Sources: [tbd]
+// Sources: D.S. Malik Ch 5.
 
 #include <iostream>
 #include <fstream>
@@ -26,7 +26,7 @@ int main()
 
     inputFile.open(filePath);
 
-    // ** check to see if the input file can be found **
+    //** check to see if the input file can be found **
     while (!inputFile.is_open()) 
     {
         cout << "Something went wrong and we cannot find your file.\nPlease enter the Path again again." << endl;
@@ -35,7 +35,19 @@ int main()
     }
 
     outputFile.open("DC_assignment5_output.txt");
+    
+    //** echo input file **
+    cout << "Below is what is in the input file:" << endl;
+    while (!inputFile.eof())
+    {
+        inputFile >> dish >> additionalTime >> totalTimeAllowed;
+        cout << right << setw(10) << dish << setw(10) << additionalTime << setw(10) << totalTimeAllowed << endl;
+    }
 
+    inputFile.close(); //close input file since while loop has read it.
+    inputFile.open(filePath); //reopen input file
+
+    cout << "\n \nHere are the calculations of what can be cooked:\n" << endl;
     while (!inputFile.eof())
     {
         inputFile >> dish >> additionalTime >> totalTimeAllowed; //assign input values to variables
@@ -44,7 +56,7 @@ int main()
         int nextDish = 0;
         int availTime = totalTimeAllowed;
 
-        //calculate if there is enough time to make an additional dish
+        // ** calculate if there is enough time to make an additional dish **
         while (availTime >= nextDish)
             {   
                 nextDish = dish + (additionalTime * totalDishes);
@@ -52,7 +64,7 @@ int main()
                 availTime = availTime - nextDish;
             }
            
-
+        // ** write to output file **
         outputFile << right << setw(10) << dish << setw(10) << additionalTime << setw(10) << totalTimeAllowed << setw(30) << "total possible dishes: " << totalDishes << setw(10) << endl;
 
         cout << right << setw(10) << dish << setw(10) << additionalTime << setw(10) << totalTimeAllowed << setw(30) << "total possible dishes: " << totalDishes << setw(10) << endl;

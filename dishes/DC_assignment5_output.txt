@@ -7,3 +7,4 @@
          4         3        35       total possible dishes: 4
         20        10       200       total possible dishes: 5
          9         5        65       total possible dishes: 4
+         3         3         3       total possible dishes: 1
