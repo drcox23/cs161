@@ -1,11 +1,68 @@
-// dishes.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Douglas Cox
+// Assignment 5 - dishes
+// Sources: [tbd]
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //store file path input by user
+    string filePath;
+
+    //variables from input file
+    int dish, additionalTime, totalTimeAllowed; 
+    
+    //declare stream variables
+    ifstream inputFile;
+    ofstream outputFile;
+
+    cout << "Please input the full PATH of data file (no quotations marks)" << endl;
+    cin >> filePath;
+
+    inputFile.open(filePath);
+
+    // ** check to see if the input file can be found **
+    while (!inputFile.is_open()) 
+    {
+        cout << "Something went wrong and we cannot find your file.\nPlease enter the Path again again." << endl;
+        cin >> filePath;
+        inputFile.open(filePath);
+    }
+
+    outputFile.open("DC_assignment5_output.txt");
+
+    while (!inputFile.eof())
+    {
+        inputFile >> dish >> additionalTime >> totalTimeAllowed; //assign input values to variables
+
+        int totalDishes = 0;
+        int nextDish = 0;
+        int availTime = totalTimeAllowed;
+
+        //calculate if there is enough time to make an additional dish
+        while (availTime >= nextDish)
+            {   
+                nextDish = dish + (additionalTime * totalDishes);
+                totalDishes++;
+                availTime = availTime - nextDish;
+            }
+           
+
+        outputFile << right << setw(10) << dish << setw(10) << additionalTime << setw(10) << totalTimeAllowed << setw(30) << "total possible dishes: " << totalDishes << setw(10) << endl;
+
+        cout << right << setw(10) << dish << setw(10) << additionalTime << setw(10) << totalTimeAllowed << setw(30) << "total possible dishes: " << totalDishes << setw(10) << endl;
+        
+    }
+    
+    outputFile.close();
+    inputFile.close();
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
