@@ -35,3 +35,6 @@
 *.vs*
 *.vcxproj*
 */Debug*
+
+# PDF
+*.pdf
